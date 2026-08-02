@@ -720,5 +720,15 @@
                 "page": 1
             }
         ]
+    },
+    {
+        "question": "what is the paper about",
+        "answer": "### \u2705 Answer\n\n- The paper discusses the application of **blockchain technology** in **supply chain management**.\n\n- It highlights how traditional supply chains suffer from **fragmented records**.\n\n- It demonstrates how **distributed ledgers** can reduce fraud, improve trust, and streamline auditing.\n\n- It notes that while **adoption challenges** remain, the long-term benefits outweigh the costs.\n\n### \ud83d\udca1 Simple Explanation\n\nThis paper explains how blockchain technology fixes messy and disconnected records in supply chains. By using a secure shared system, it helps businesses stop fraud, build trust, and make auditing much easier.\n\n### \ud83d\udccc Key Takeaways\n\n- **Blockchain** improves transparency and traceability in supply chains.\n\n- **Distributed ledgers** reduce fraud and increase trust among parties.\n\n- Long-term **benefits** outweigh the adoption challenges.",
+        "sources": [
+            {
+                "file": "Blockchain_in_Supply_Chain_Management.pdf",
+                "page": 1
+            }
+        ]
     }
 ]

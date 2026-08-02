@@ -1,5 +1,4 @@
-import ollama
-from config import OLLAMA_MODEL
+from llm.gemini import generate_response
 from memory.conversation_memory import get_memory
 
 def summarize(question: str, context: str):
@@ -64,17 +63,10 @@ Question:
 Answer:
 """
 
-    response = ollama.chat(
-    model=OLLAMA_MODEL,
-    messages=[
-        {
-            "role": "user",
-            "content": prompt
-        }
-    ]
-)
-    print("\n========== RAW MODEL OUTPUT ==========")
-    print(response["message"]["content"])
-    print("======================================\n")
-    
-    return response["message"]["content"]
+    response = generate_response(prompt)
+
+    print("\n========== GEMINI OUTPUT ==========")
+    print(response)
+    print("===================================\n")
+
+    return response
