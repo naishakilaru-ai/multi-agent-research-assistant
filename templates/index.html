@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Multi-Agent Research Assistant</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="glass header">
+
+            <div>
+
+                <h1>🤖 Multi-Agent Research Assistant</h1>
+
+                <p>Research smarter using AI agents</p>
+
+            </div>
+
+            <div class="header-right">
+
+                <!-- Theme Toggle -->
+
+                <button id="themeToggle" title="Toggle Theme">
+                    ☀️
+                </button>
+
+                <!-- Status -->
+
+                <div class="status-pill">
+                    🟢 Online
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- =========================
+             MAIN
+        ========================== -->
+
+        <main>
+
+            <!-- =========================
+                    SIDEBAR
+                ========================== -->
+
+<aside class="glass sidebar">
+
+    <!-- Upload -->
+
+    <div class="upload-box" id="dropArea">
+
+    <div class="upload-icon">📄</div>
+
+    <h3>Drag & Drop Document</h3>
+
+    <p>or click below</p>
+
+    <input
+    type="file"
+    id="fileInput"
+    accept=".pdf,.docx,.txt"
+    hidden>
+
+<button id="uploadBtn">
+    📤 Upload Document
+</button>
+
+<div id="uploadStatus"></div>
+</div>
+
+<!-- =========================
+     Uploaded Documents
+========================= -->
+
+<div class="documents-section">
+
+    <h2>📚 Uploaded Papers</h2>
+
+    <div id="documentsList" class="document-list">
+    </div>
+
+</div>
+    <!-- AI Agents -->
+
+    <div class="agent-section">
+
+        <h2>🤖 AI Agents</h2>
+
+        <!-- Retrieval -->
+
+        <div class="agent retrieval">
+
+            <div class="agent-info">
+
+                <h3>🔍 Retrieval Agent</h3>
+
+                <p>Finds relevant document chunks</p>
+
+            </div>
+
+            <span id="retrievalStatus">
+                Idle
+            </span>
+
+        </div>
+
+        <!-- Summary -->
+
+        <div class="agent summary">
+
+            <div class="agent-info">
+
+                <h3>📝 Summary Agent</h3>
+
+                <p>Creates concise summaries</p>
+
+            </div>
+
+            <span id="summaryStatus">
+                Idle
+            </span>
+
+        </div>
+
+        <!-- Learning -->
+
+        <div class="agent learning">
+
+            <div class="agent-info">
+
+                <h3>🧠 Learning Agent</h3>
+
+                <p>Learns from interactions</p>
+
+            </div>
+
+            <span id="learningStatus">
+                Idle
+            </span>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+            <!-- =========================
+                 CHAT
+            ========================== -->
+
+            <section class="glass chat-section">
+
+                <div id="messages" class="messages">
+
+                    <div class="bot-message">
+
+                        👋 Welcome!
+
+                        <br><br>
+
+                        Upload your research paper and ask your first question.
+
+                    </div>
+
+                </div>
+
+                <!-- INPUT -->
+
+                <div class="input-area">
+
+                    <input
+
+                        id="question"
+
+                        type="text"
+
+                        placeholder="Ask anything about your document..."
+
+                    >
+
+                    <button id="sendBtn">
+
+                        Ask
+
+                    </button>
+                    <button id="summaryBtn">
+                        📄 Summarize Paper
+                    </button>
+
+                </div>
+
+                
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/static/script.js"></script>
+    
+
+</body>
+
+</html>
