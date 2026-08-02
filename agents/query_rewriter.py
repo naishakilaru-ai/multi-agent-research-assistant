@@ -1,5 +1,4 @@
-import ollama
-from config import OLLAMA_MODEL
+from llm.gemini import generate_response
 
 
 def rewrite_query(question: str, history: str):
@@ -24,14 +23,6 @@ Current Question:
 Standalone Search Query:
 """
 
-    response = ollama.chat(
-        model=OLLAMA_MODEL,
-        messages=[
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ]
-    )
+    response = generate_response(prompt)
 
-    return response["message"]["content"].strip()
+    return response.strip()
