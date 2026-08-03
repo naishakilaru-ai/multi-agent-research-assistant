@@ -3,6 +3,12 @@ from llm.gemini import generate_response
 
 def rewrite_query(question: str, history: str):
 
+    question = question.strip()
+
+    # Skip Gemini for standalone questions
+    if len(question.split()) <= 6:
+        return question
+
     prompt = f"""
 You are a query rewriting assistant.
 

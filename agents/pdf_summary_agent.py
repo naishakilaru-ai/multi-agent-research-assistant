@@ -1,8 +1,4 @@
-import ollama
-from config import OLLAMA_MODEL
-
-
-MODEL = OLLAMA_MODEL
+from llm.gemini import generate_response
 
 
 def summarize_chunk(chunk: str):
@@ -31,21 +27,7 @@ Research Paper Section:
 {chunk}
 """
 
-    response = ollama.chat(
-        model=MODEL,
-        messages=[
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ],
-        options={
-        "num_predict": 300,
-        "temperature": 0.2
-        }
-    )
-
-    return response["message"]["content"]
+    return generate_response(prompt)
 
 def summarize_batch(chunks: list[str]):
     """
@@ -74,21 +56,7 @@ Research Paper Sections:
 {combined_text}
 """
 
-    response = ollama.chat(
-        model=MODEL,
-        messages=[
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ],
-        options={
-        "num_predict": 300,
-        "temperature": 0.2
-        }
-    )
-
-    return response["message"]["content"]
+    return generate_response(prompt)
 
 
 def summarize_document(chunk_summaries: str):
@@ -141,18 +109,4 @@ Research Paper Summaries:
 {chunk_summaries}
 """
 
-    response = ollama.chat(
-        model=MODEL,
-        messages=[
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ],
-        options={
-        "num_predict": 300,
-        "temperature": 0.2
-        }
-    )
-
-    return response["message"]["content"]
+    return generate_response(prompt)

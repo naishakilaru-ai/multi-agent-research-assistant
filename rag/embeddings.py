@@ -1,14 +1,11 @@
-import ollama
+from sentence_transformers import SentenceTransformer
+
+# Load the model once
+model = SentenceTransformer("all-MiniLM-L6-v2")
 
 
 def get_embedding(text: str) -> list:
     """
-    Generate an embedding using Ollama.
+    Generate an embedding for the given text.
     """
-
-    response = ollama.embed(
-        model="nomic-embed-text",
-        input=text
-    )
-
-    return response["embeddings"][0]
+    return model.encode(text).tolist()

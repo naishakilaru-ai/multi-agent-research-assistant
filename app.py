@@ -1,4 +1,5 @@
 import os
+import time
 import shutil
 from utils.formatter import format_answer
 from collections import defaultdict
@@ -147,10 +148,12 @@ async def ask_question(request: QuestionRequest):
 
         # Retrieve relevant chunks
         history=get_memory()
+        start = time.time()
         search_query=rewrite_query(
             request.question,
             history
         )
+        print("Rewrite took:", time.time() - start, "seconds")
 
         selected_documents=request.documents
         if len(selected_documents) == 0:
@@ -167,14 +170,16 @@ async def ask_question(request: QuestionRequest):
                     "summarise selected" in question_lower
                 )
             )
+        start=time.time()
         if len(selected_documents) == 1:
             results = retrieve_context(search_query,selected_documents[0])
             
         else:
             results = retrieve_multiple_context(search_query,selected_documents)
-
+        print("Retrieval took:", time.time() - start, "seconds")
         documents = results["documents"][0]
         metadatas = results["metadatas"][0]
+        print("Retrieved chunks:", len(documents))
 
         unique_documents = []
         unique_metadatas = []
@@ -223,19 +228,27 @@ async def ask_question(request: QuestionRequest):
                 grouped[meta["source"]].append(doc)
             for filename, chunks in grouped.items():
                 document_context = "\n\n".join(chunks)
+                print(filename)
+                print("Context length:", len(document_context))
+                start = time.time()
                 document_summary = summarize(
                     f"Summarize this paper only: {filename}",
                     document_context
                 )
+                print(filename, "summary took:", time.time() - start, "seconds")
+
                 summaries.append(
                     f"## 📄 {filename}\n\n{document_summary}"
                 )
             answer = "\n\n---\n\n".join(summaries)
         else:
+            print("Context length:", len(context))
+            start = time.time()
             answer = summarize(
                 request.question,
                 context
             )
+            print("Summarization took:", time.time() - start, "seconds")
         answer=format_answer(answer)
             
 
