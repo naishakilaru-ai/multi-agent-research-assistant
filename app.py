@@ -149,10 +149,8 @@ async def ask_question(request: QuestionRequest):
         # Retrieve relevant chunks
         history=get_memory()
         start = time.time()
-        search_query=rewrite_query(
-            request.question,
-            history
-        )
+        search_query=request.question
+
         print("Rewrite took:", time.time() - start, "seconds")
 
         selected_documents=request.documents
