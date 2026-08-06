@@ -1,4 +1,4 @@
-# 📚 Multi-Agent Research Assistant
+#  Multi-Agent Research Assistant
 
 An AI-powered research assistant that allows users to upload research papers (PDFs), ask questions in natural language, generate summaries, and retrieve relevant information using Retrieval-Augmented Generation (RAG).
 
@@ -6,26 +6,26 @@ Built using **FastAPI**, **Ollama**, **ChromaDB**, and **Sentence Transformers**
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 📄 Upload one or multiple research papers (PDF)
-- 🤖 Multi-Agent Architecture
+-  Upload one or multiple research papers (PDF)
+-  Multi-Agent Architecture
   - Query Rewriting Agent
   - Retrieval Agent
   - Summary Agent
   - Learning Agent
-- 🔍 Retrieval-Augmented Generation (RAG)
-- 🧠 Semantic search using Sentence Transformers
-- 🗂️ ChromaDB vector database
-- 💬 Conversational memory for follow-up questions
-- 📚 Multi-document question answering
-- 📝 Complete paper summarization
-- 🎯 Source attribution with page numbers
-- 🎨 Modern and responsive user interface
+-  Retrieval-Augmented Generation (RAG)
+-  Semantic search using Sentence Transformers
+-  ChromaDB vector database
+-  Conversational memory for follow-up questions
+-  Multi-document question answering
+-  Complete paper summarization
+-  Source attribution with page numbers
+-  Modern and responsive user interface
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
                 User
@@ -68,7 +68,7 @@ Conversation Memory
 
 ---
 
-# 🛠️ Tech Stack
+#  Tech Stack
 
 ### Backend
 
@@ -98,7 +98,7 @@ Conversation Memory
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```
 Multi-Agent-Research-Assistant/
@@ -200,7 +200,7 @@ http://127.0.0.1:8000
 
 ---
 
-# 💡 Usage
+#  Usage
 
 1. Upload one or more research papers.
 2. Select the papers you want to query.
@@ -210,7 +210,7 @@ http://127.0.0.1:8000
 
 ---
 
-# 📸 Screenshots
+#  Screenshots
 
 > Add screenshots here after uploading them.
 
@@ -226,7 +226,7 @@ screenshots/
 
 ---
 
-# 🔍 Example Questions
+#  Example Questions
 
 ### Single Paper
 
@@ -246,7 +246,7 @@ screenshots/
 
 ---
 
-# ✨ Key Highlights
+#  Key Highlights
 
 - Multi-Agent workflow
 - Retrieval-Augmented Generation (RAG)
@@ -272,7 +272,7 @@ screenshots/
 
 ---
 
-# 👩‍💻 Author
+#  Author
 
 **Naisha Kilaru**
 
