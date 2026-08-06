@@ -1,4 +1,4 @@
-#  Multi-Agent Research Assistant
+# Multi-Agent Research Assistant
 
 An AI-powered research assistant that allows users to upload research papers (PDFs), ask questions in natural language, generate summaries, and retrieve relevant information using Retrieval-Augmented Generation (RAG).
 
