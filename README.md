@@ -1,10 +1,14 @@
 # Multi-Agent Research Assistant
 
+
+
 An AI-powered research assistant that allows users to upload research papers (PDFs), ask questions in natural language, generate summaries, and retrieve relevant information using Retrieval-Augmented Generation (RAG).
 
 Built using **FastAPI**, **Ollama**, **ChromaDB**, and **Sentence Transformers**, the application employs a **multi-agent architecture** to process user queries efficiently.
 
 ---
+
+
 
 ##  Features
 
@@ -134,7 +138,7 @@ Multi-Agent-Research-Assistant/
 
 ---
 
-# ⚙️ Installation
+#  Installation
 
 ## Clone Repository
 
@@ -262,9 +266,7 @@ screenshots/
 # 🔮 Future Improvements
 
 - PDF citation export
-- Research paper comparison tables
 - Streaming responses
-- User authentication
 - Cloud deployment
 - Research note generation
 - Keyword extraction
